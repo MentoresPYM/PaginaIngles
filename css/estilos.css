@@ -84,7 +84,7 @@ main {
     left: 0;
     width: 100%;
     height: 80%;
-    background-image: linear-gradient(180deg, rgba(51, 172, 21, 0.008) 0%, rgba(45, 45, 158, 0.122) 100%), url('../images/fondos/fondo3.jpg');
+    background-image: linear-gradient(180deg, rgba(51, 172, 21, 0.008) 0%, rgba(45, 45, 158, 0.122) 100%), url('../images/fondos/unnamed.jpg');
     background-size: cover;
     clip-path: polygon(0 0, 100% ,50%, 0 95%, 50% 95%, 50%, 30%);
     z-index: -1;
