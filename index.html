@@ -9,134 +9,144 @@
             type="image/x-icon">
         <link rel="stylesheet" href="./css/normalize.css">
         <link rel="stylesheet" href="./css/estilos.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+
+
         <script>
         function reproducirSonido(idAudio) {
             var audio = document.getElementById(idAudio);
             audio.play();
         }
         </script>
+
+
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
     </head>
     <body>
-        <header class="header">
-            <nav class="nav container">
-                
-
-                <div id="search-container">
-                    <input type="text" id="search-bar"
-                        placeholder="Buscar en el glosario...">
-                    <button onclick="buscarTermino()">Buscar</button>
+        <header class="header bg-gradient-to-r from-blue-900 to-blue-800 text-white py-4">
+            <nav class="nav container mx-auto flex items-center justify-between">
+                <div id="search-container" class="flex items-center">
+                    <input type="text" id="search-bar" placeholder="Buscar en el glosario..." class="bg-gray-700 text-white px-4 py-2 rounded-l-lg focus:outline-none">
+                    <button onclick="buscarTermino()" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-r-lg">Buscar</button>
                 </div>
-                
-                
             </nav>
-
-            
-            <section class="seccion">
-                <div class="container">
-                    <div class="section-content">
+        
+            <section class="seccion bg-gradient-to-r from-blue-900 to-blue-800 text-white py-4">
+                <div class="container mx-auto flex items-center justify-center">
+                    <div class="section-content flex flex-col md:flex-row items-center">
                         <!-- Imagen a la izquierda -->
-                        <img src="images/logo_istr.png " alt= "Imagen Izquierda" class="img-izquierda">
-                       
-                        <h1>Speech Development Glossary (SDG)</h1>
-                        <p>Tecnología Superior en Desarrollo de Software</p>
-                        <img src="images/carrera.png" alt="Imagen Derecha" class="img-derecha">
+                        <img src="images/logo_istr.png" alt="Imagen Izquierda" class="img-izquierda w-32 md:w-48 mb-4 md:mb-0">
+            
+                        <div class="text-center md:text-left">
+                            <h1 class="text-3xl font-bold mb-2">Speech Development Glossary (SDG)</h1>
+                            <p class="text-lg">Tecnología Superior en Desarrollo de Software</p>
+                        </div>
+            
                         <!-- Imagen a la derecha -->
-                      
+                        <img src="images/carrera.png" alt="Imagen Derecha" class="img-derecha w-32 md:w-48 ml-auto">
                     </div>
                 </div>
             </section>
             
         </header>
+        
       
             <main>
 
-            <section class="container2">
-                <div class="image">
-                    <img class="portada" src="images/estudiante.jpg"
-                        alt="Descriptive Alt Text">
+                <section class="container2 flex flex-wrap items-center justify-center py-10 px-6">
+                    <div class="w-full md:w-1/2 md:pr-10">
+                        <img class="portada rounded-lg shadow-lg" src="images/estudiante.jpg" alt="Descriptive Alt Text">
+                    </div>
+                    <div class="w-full md:w-1/2 mt-6 md:mt-0">
+                        <h1 class="text-4xl font-bold mb-4">ITS RIOBAMBA TECHNICAL ENGLISH</h1>
+                        <h2 class="text-2xl font-semibold mb-4">Welcome to Speech Development Glossary (SDG)</h2>
+                        <p class="mb-4">
+                            Hello Software Development students from the “Riobamba” Higher Technological Institute!
+                        </p>
+                        <p class="mb-4">
+                            SDG is your essential tool to expand and strengthen your technical vocabulary in the field of software development.
+                        </p>
+                        <p class="mb-4">
+                            In SDG, you will find a vast bank of technical terms, clear definitions, practical examples and interactive tools to help you improve your understanding and skills in the area.
+                        </p>
+                        <p>
+                            Start exploring and expanding your knowledge with SDG!
+                        </p>
+                    </div>
+                </section>
+                
+                <div class="Container1 bg-gray-100 py-6 px-4">
+                    <!-- INDICE-->
+                    <nav class="indice">
+                        <h2 class="subtitle text-center text-2xl font-bold mb-4">Tabla de Contenidos</h2>
+                        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                            <div class="fila-indice">
+                                <a href="#A" class="block text-center text-blue-500 hover:text-blue-700">A</a>
+                                <a href="#B" class="block text-center text-blue-500 hover:text-blue-700">B</a>
+                            </div>
+                            <div class="fila-indice">
+                                <a href="#C" class="block text-center text-blue-500 hover:text-blue-700">C</a>
+                                <a href="#D" class="block text-center text-blue-500 hover:text-blue-700">D</a>
+                            </div>
+                            <div class="fila-indice">
+                                <a href="#E" class="block text-center text-blue-500 hover:text-blue-700">E</a>
+                                <a href="#F" class="block text-center text-blue-500 hover:text-blue-700">F</a>
+                            </div>
+                            <div class="fila-indice">
+                                <a href="#G" class="block text-center text-blue-500 hover:text-blue-700">G</a>
+                                <a href="#H" class="block text-center text-blue-500 hover:text-blue-700">H</a>
+                            </div>
+                            <div class="fila-indice">
+                                <a href="#I" class="block text-center text-blue-500 hover:text-blue-700">I</a>
+                                <a href="#J" class="block text-center text-blue-500 hover:text-blue-700">J</a>
+                            </div>
+                            <div class="fila-indice">
+                                <a href="#K" class="block text-center text-blue-500 hover:text-blue-700">K</a>
+                                <a href="#L" class="block text-center text-blue-500 hover:text-blue-700">L</a>
+                            </div>
+                            <div class="fila-indice">
+                                <a href="#M" class="block text-center text-blue-500 hover:text-blue-700">M</a>
+                                <a href="#N" class="block text-center text-blue-500 hover:text-blue-700">N</a>
+                            </div>
+                            <div class="fila-indice">
+                                <a href="#O" class="block text-center text-blue-500 hover:text-blue-700">O</a>
+                                <a href="#P" class="block text-center text-blue-500 hover:text-blue-700">P</a>
+                            </div>
+                            <div class="fila-indice">
+                                <a href="#Q" class="block text-center text-blue-500 hover:text-blue-700">Q</a>
+                                <a href="#R" class="block text-center text-blue-500 hover:text-blue-700">R</a>
+                            </div>
+                            <div class="fila-indice">
+                                <a href="#S" class="block text-center text-blue-500 hover:text-blue-700">S</a>
+                                <a href="#T" class="block text-center text-blue-500 hover:text-blue-700">T</a>
+                            </div>
+                            <div class="fila-indice">
+                                <a href="#U" class="block text-center text-blue-500 hover:text-blue-700">U</a>
+                                <a href="#V" class="block text-center text-blue-500 hover:text-blue-700">V</a>
+                            </div>
+                            <div class="fila-indice">
+                                <a href="#W" class="block text-center text-blue-500 hover:text-blue-700">W</a>
+                                <a href="#X" class="block text-center text-blue-500 hover:text-blue-700">X</a>
+                            </div>
+                            <div class="fila-indice">
+                                <a href="#Y" class="block text-center text-blue-500 hover:text-blue-700">Y</a>
+                                <a href="#Z" class="block text-center text-blue-500 hover:text-blue-700">Z</a>
+                            </div>
+                        </div>
+                    </nav>
                 </div>
-                <div class="text">
-                    <h1>ITS RIOBAMBA TECHNICAL ENGLISH</h1>
-                    <h2>Welcome to Speech Development Glossary (SDG)</h2>
-                    <p>
-                        Hello Software Development students from the “Riobamba”
-                        Higher Technological Institute!
-                    </p>
-                    <p>
-                        SDG is your essential tool to expand and strengthen your
-                        technical vocabulary in the field of software
-                        development.
-                    </p>
-                    <p>
-                        In SDG, you will find a vast bank of technical terms,
-                        clear definitions, practical examples and interactive
-                        tools to help you improve your understanding and skills
-                        in the area.
-                    </p>
-                    <p>
-                        Start exploring and expanding your knowledge with
-                        SDG!
-                    </p>
-                </div>
-            </section>
-            <div class="Container1">
-                <!-- INDICE-->
-                <nav class="indice">
-                    <h2 class="subtitle"> Tabla de Contenidos</h2>
-                    <div class="fila-indice">
-                        <a href="#A">A</a>
-                        <a href="#B">B</a>
-                    </div>
-                    <div class="fila-indice">
-                        <a href="#C">C</a>
-                        <a href="#D">D</a>
-                    </div>
-                    <div class="fila-indice">
-                        <a href="#E">E</a>
-                        <a href="#F">F</a>
-                    </div>
-                    <div class="fila-indice">
-                        <a href="#G">G</a>
-                        <a href="#H">H</a>
-                    </div>
-                    <div class="fila-indice">
-                        <a href="#I">I</a>
-                        <a href="#J">J</a>
-                    </div>
-                    <div class="fila-indice">
-                        <a href="#K">K</a>
-                        <a href="#L">L</a>
-                    </div>
-                    <div class="fila-indice">
-                        <a href="#M">M</a>
-                        <a href="#N">N</a>
-                    </div>
-                    <div class="fila-indice">
-                        <a href="#O">O</a>
-                        <a href="#P">P</a>
-                    </div>
-                    <div class="fila-indice">
-                        <a href="#Q">Q</a>
-                        <a href="#R">R</a>
-                    </div>
-                    <div class="fila-indice">
-                        <a href="#S">S</a>
-                        <a href="#T">T</a>
-                    </div>
-                    <div class="fila-indice">
-                        <a href="#U">U</a>
-                        <a href="#V">V</a>
-                    </div>
-                    <div class="fila-indice">
-                        <a href="#W">W</a>
-                        <a href="#X">X</a>
-                    </div>
-                    <div class="fila-indice">
-                        <a href="#Y">Y</a>
-                        <a href="#Z">Z</a>
-                    </div>
-                </nav>
-            </div>
+                
 
             <div class="Glosario" id="glossary">
             <!-- A -->
@@ -145,72 +155,77 @@
             <!-- Más letras y términos -->
 
             <!-- N -->
-                <dl>
-                    <dt>
-                        <h2 id="N">N</h2>
-                    </dt>
-                    <section class="Diccionario" id="dictionary">
-                        <div class="termino">
-                            <div class="word-container">
-                                <span class="word">NaaS</span>
-                                <button class="boton-sonido">🔊</button>
-                            </div>
-                            <p class="subtitulo">
-                                Network as a Service; a category of cloud
-                                services that provides users with the capability
-                                of where the capability provided to the cloud
-                                service user is to usinge network/transport
-                                connectivity services and/or inter-cloud network
-                                connectivity services.
-                            </p>
+            <dl class="container mx-auto py-10">
+                <dt class="text-3xl font-bold text-center mb-6">Diccionario Técnico</dt>
+            
+                <section id="dictionary" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Término NaaS -->
+                    <div class="termino bg-white rounded-lg shadow-md p-6">
+                        <div class="word-container flex items-center justify-between mb-4">
+                            <span class="word text-lg font-semibold">NaaS</span>
+                            <button class="boton-sonido bg-blue-500 text-white rounded-full p-2 hover:bg-blue-600 focus:outline-none">
+                                🔊
+                            </button>
                         </div>
-
-                        <div class="termino">
-                            <div class="word-container">
-                                <span class="word">NameServer</span>
-                                <button class="boton-sonido">🔊</button>
-                            </div>
-                            <p class="subtitulo">
-                                A computer that runs a program for converting
-                                Internet domain names into the corresponding
-                                IP addresses and vice versa.
-                            </p>
+                        <p class="subtitulo">
+                            Network as a Service; a category of cloud services that provides users with the capability of where the capability provided to the cloud service user is to usinge network/transport connectivity services and/or inter-cloud network connectivity services.
+                        </p>
+                    </div>
+            
+                    <!-- Término NameServer -->
+                    <div class="termino bg-white rounded-lg shadow-md p-6">
+                        <div class="word-container flex items-center justify-between mb-4">
+                            <span class="word text-lg font-semibold">NameServer</span>
+                            <button class="boton-sonido bg-blue-500 text-white rounded-full p-2 hover:bg-blue-600 focus:outline-none">
+                                🔊
+                            </button>
                         </div>
-                        <div class="termino">
-                            <div class="word-container">
-                                <span class="word">Nat</span>
-                                <button class="boton-sonido">🔊</button>
-                            </div>
-                            <p class="subtitulo">
-                                Network Address Translation; a standard that
-                                enables a LAN to use a set of IP addresses
-                                for internal traffic and a single IP address for
-                                communications with the Internet.
-                            </p>
+                        <p class="subtitulo">
+                            A computer that runs a program for converting Internet domain names into the corresponding IP addresses and vice versa.
+                        </p>
+                    </div>
+            
+                    <!-- Término Nat -->
+                    <div class="termino bg-white rounded-lg shadow-md p-6">
+                        <div class="word-container flex items-center justify-between mb-4">
+                            <span class="word text-lg font-semibold">Nat</span>
+                            <button class="boton-sonido bg-blue-500 text-white rounded-full p-2 hover:bg-blue-600 focus:outline-none">
+                                🔊
+                            </button>
                         </div>
-                        <div class="termino">
-                            <div class="word-container">
-                                <span class="word">Network</span>
-                                <button class="boton-sonido">🔊</button>
-                            </div>
-                            <p class="subtitulo">
-                                A system of connected devices that can share
-                                information with each other.
-                            </p>
+                        <p class="subtitulo">
+                            Network Address Translation; a standard that enables a LAN to use a set of IP addresses for internal traffic and a single IP address for communications with the Internet.
+                        </p>
+                    </div>
+            
+                    <!-- Término Network -->
+                    <div class="termino bg-white rounded-lg shadow-md p-6">
+                        <div class="word-container flex items-center justify-between mb-4">
+                            <span class="word text-lg font-semibold">Network</span>
+                            <button class="boton-sonido bg-blue-500 text-white rounded-full p-2 hover:bg-blue-600 focus:outline-none">
+                                🔊
+                            </button>
                         </div>
-                        <div class="termino">
-                            <div class="word-container">
-                                <span class="word">Network Adapter</span>
-                                <button class="boton-sonido">🔊</button>
-                            </div>
-                            <p class="subtitulo">
-                                A device that connects your computer to a
-                                network; also called an adapter card or network
-                                interface card.
-                            </p>
+                        <p class="subtitulo">
+                            A system of connected devices that can share information with each other.
+                        </p>
+                    </div>
+            
+                    <!-- Término Network Adapter -->
+                    <div class="termino bg-white rounded-lg shadow-md p-6">
+                        <div class="word-container flex items-center justify-between mb-4">
+                            <span class="word text-lg font-semibold">Network Adapter</span>
+                            <button class="boton-sonido bg-blue-500 text-white rounded-full p-2 hover:bg-blue-600 focus:outline-none">
+                                🔊
+                            </button>
                         </div>
-                    </section>
-                </dl>
+                        <p class="subtitulo">
+                            A device that connects your computer to a network; also called an adapter card or network interface card.
+                        </p>
+                    </div>
+                </section>
+            </dl>
+            
                 <!-- O -->
 
                 <dl>
