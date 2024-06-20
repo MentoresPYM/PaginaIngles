@@ -144,6 +144,28 @@ main {
     text-align: center;
 }
 
+/* Estilo para la imagen a la izquierda */
+.img-izquierda {
+    float: left;
+    margin-right: 15px; /* Espacio a la derecha de la imagen */
+    width: 100px;
+    height: 100px;
+}
+.img-derecha {
+    display: block;
+    margin: 15px auto; /* Centra la imagen horizontalmente con espacios arriba y abajo */
+    clear: both;
+}
+
+/* Estilo para la imagen a la derecha */
+
+/* Limpiar flotantes después de las imágenes */
+.section-content::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 
 .indice {
     font-size: 0.9em; /* Hazlo más pequeño */
