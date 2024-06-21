@@ -152,9 +152,9 @@ main {
     height: 100px;
 }
 .img-derecha {
-    display: block;
-    margin: 15px auto; /* Centra la imagen horizontalmente con espacios arriba y abajo */
-    clear: both;
+    float: right;
+    margin-right:   11px ; /* Centra la imagen horizontalmente con espacios arriba y abajo */
+    
 }
 
 /* Estilo para la imagen a la derecha */
