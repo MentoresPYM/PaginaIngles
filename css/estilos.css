@@ -19,6 +19,8 @@ main {
     padding: var(--padding-container);
 }
 
+
+
 .container2{
     display: flex;
     align-items: center;
@@ -127,7 +129,7 @@ main {
     padding: 0 20px; /* Padding lateral */
 }
 .section-content h1 {
-    color: black;
+    color: white;
     font-size: 40px; /* Tamaño de fuente */
     padding-top: 10px;
     font-weight: bold; /* Negrita */
@@ -137,7 +139,7 @@ main {
 }
 
 .section-content p {
-    color:black;
+    color:white;
     font-size: 25px; /* Tamaño de fuente */
     padding-top:10px;
     font-weight: bold; /* Negrita */
@@ -151,10 +153,12 @@ main {
     width: 100px;
     height: 100px;
 }
+
 .img-derecha {
     float: right;
-    margin-right:   11px ; /* Centra la imagen horizontalmente con espacios arriba y abajo */
-    
+    margin-right: 11px; /* Añade un margen a la derecha de la imagen */
+    max-width: 150px; /* Ajusta el ancho máximo a 100 píxeles */
+    height: auto; /* Mantiene la proporción original de la imagen */
 }
 
 /* Estilo para la imagen a la derecha */
@@ -216,15 +220,7 @@ main {
     gap: 20px; /* Espacio entre tarjetas */
 }
 
-.termino {
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 20px;
-    width: 300px; /* Ancho fijo de la tarjeta */
-    text-align: left;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
+
 
 .gallery {
     display: flex;
@@ -233,17 +229,22 @@ main {
     justify-content: center;
     padding: 20px;
 }
+
 .gallery-item {
     width: 150px; /* Ancho fijo para cada imagen */
     text-align: center;
 }
+
 .gallery-item img {
     width: 100%;
+    max-width: 100%; /* Asegura que la imagen no sea más ancha que su contenedor */
     height: auto;
+    max-height: 150px; /* Altura máxima para asegurar que no se estire hacia abajo */
     border-radius: 50%; /* Hacer la imagen redonda */
+    object-fit: cover; /* Ajustar la imagen manteniendo la relación de aspecto y recortando según sea necesario */
     border: 2px solid #ccc;
-    overflow: hidden; /* Recortar la imagen dentro del borde redondo */
 }
+
 .gallery-item .name {
     margin-top: 10px;
     font-size: 14px;
@@ -271,11 +272,7 @@ h1 {
     align-items: center;
 }
 
-.word-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 
 .word {
     font-size: 24px;
@@ -324,6 +321,21 @@ h1 {
 }
 
 .boton-sonido:hover {
+    background-color: #0056b3;
+}
+
+.boton-reconocimiento {
+    font-size: 1.5em;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.boton-reconocimiento:hover {
     background-color: #0056b3;
 }
 
